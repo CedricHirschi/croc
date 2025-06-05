@@ -38,6 +38,13 @@ package croc_pkg;
   // Number of additional interrupts coming into croc_domain and going to the core
   localparam int unsigned NumExternalIrqs = 4;
 
+  ///////////////////////////////////
+  // Constants for Block Swapping ///
+  ///////////////////////////////////
+  localparam int unsigned NUM_SRAM_ADDRESSES = 4; // DONE: change
+  localparam int unsigned NUM_REQ_BLOCKS = 2;
+
+  localparam int unsigned FIRST_USABLE_SRAM_ADDR = 32'h1000_0800;
 
   ///////////////////////
   // Address Maps     ///
