@@ -5,6 +5,8 @@
 // Authors:
 // - Philippe Sauter <phsauter@iis.ee.ethz.ch>
 
+`include "common_cells/registers.svh"
+
 module user_domain import user_pkg::*; import croc_pkg::*; #(
   parameter int unsigned GpioCount = 16
 ) (

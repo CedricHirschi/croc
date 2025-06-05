@@ -68,7 +68,7 @@ module bootrom #(
   // Load the response data into a buffer from rom.hex
   logic [31:0] rom_data [0:SizeWords-1];
   initial begin
-    $display(">> Loading Boot ROM from: \"%s\"", FileName);
+    // $display(">> Loading Boot ROM from: \"%s\"", FileName);
 
     $readmemh(FileName, rom_data);
 
@@ -97,7 +97,7 @@ module bootrom #(
         // $display(">> Boot ROM: write access: addr_q_offset = 0x%0h", addr_q_offset);
         // rsp_err = '1;
       end else if (misaligned || out_of_bounds) begin
-        $display(">> Boot ROM: misaligned or out of bounds access: addr_q = 0x%0h", addr_q_offset);
+        // $display(">> Boot ROM: misaligned or out of bounds access: addr_q = 0x%0h", addr_q_offset);
         rsp_err = '1;
       end else begin
         // $display(">> Boot ROM: read access: addr_q_offset = 0x%0h", addr_q_offset);

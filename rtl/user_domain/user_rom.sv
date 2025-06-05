@@ -73,13 +73,13 @@ module user_rom #(
   // Load the response data into a buffer from rom.hex
   logic [31:0] rom_data [0:ROM_SIZE_WORDS-1];
   initial begin
-    $display(">> Loading User ROM from: \"%s\"", ROM_HEX_FILE);
+    // $display(">> Loading User ROM from: \"%s\"", ROM_HEX_FILE);
 
     $readmemh(ROM_HEX_FILE, rom_data);
 
-    for (int i = 0; i < ROM_SIZE_WORDS; i++) begin
-      $display("   rom_data[%0d] = %08X", i, rom_data[i]);
-    end
+    // for (int i = 0; i < ROM_SIZE_WORDS; i++) begin
+    //   $display("   rom_data[%0d] = %08X", i, rom_data[i]);
+    // end
   end
 
   // Assign the response data
@@ -92,7 +92,7 @@ module user_rom #(
     if(req_q) begin
       if(~we_q) begin
         if (word_addr > (ROM_SIZE_WORDS - 1)) begin
-          $display(">> User ROM: Read request out of bounds: addr_q = %0h, word_addr = %0d", addr_q, word_addr);
+          // $display(">> User ROM: Read request out of bounds: addr_q = %0h, word_addr = %0d", addr_q, word_addr);
           rsp_data = 32'h0;
         end else begin
           rsp_data = rom_data[word_addr];
