@@ -123,13 +123,14 @@ vendor_package:
     upstream: { git: "https://github.com/pulp-platform/register_interface.git", rev: "3b2bf592100b769977c76e51812c55cd742882f6" } # v0.4.1
     patch_dir: "rtl/patches/register_interface"
     mapping:
-      - { from: 'src/periph_to_reg.sv',         to: 'periph_to_reg.sv',            patch_dir: 'src/' }
-      - { from: 'src/reg_intf.sv',              to: 'reg_intf.sv',                 patch_dir: 'src/' }
-      - { from: 'src/reg_to_apb.sv',            to: 'reg_to_apb.sv',               patch_dir: 'src/' }
-      - { from: 'include/register_interface/',  to: 'include/register_interface/', patch_dir: 'include/' }
-      - { from: 'vendor/lowrisc_opentitan/src', to: 'lowrisc_opentitan',           patch_dir: 'vendor/' }
-      - { from: 'Bender.yml',                   to: 'Bender.yml',                  patch_dir: '' }
-      - { from: 'README.md',                    to: 'README.md',                   patch_dir: '' }
+      - { from: 'src/periph_to_reg.sv',          to: 'periph_to_reg.sv',            patch_dir: 'src/' }
+      - { from: 'src/reg_intf.sv',               to: 'reg_intf.sv',                 patch_dir: 'src/' }
+      - { from: 'src/reg_to_apb.sv',             to: 'reg_to_apb.sv',               patch_dir: 'src/' }
+      - { from: 'include/register_interface/',   to: 'include/register_interface/', patch_dir: 'include/' }
+      - { from: 'vendor/lowrisc_opentitan/src',  to: 'lowrisc_opentitan',           patch_dir: 'vendor/' }
+      - { from: 'vendor/lowrisc_opentitan/util', to: 'util',                        patch_dir: 'vendor/' }
+      - { from: 'Bender.yml',                    to: 'Bender.yml',                  patch_dir: '' }
+      - { from: 'README.md',                     to: 'README.md',                   patch_dir: '' }
 
   - name: apb
     target_dir: rtl/apb
